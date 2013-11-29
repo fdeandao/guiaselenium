@@ -81,4 +81,6 @@ java -jar selenium-server-standalone-2.37.0.jar -htmlSuite "*firefox" "http://ww
 El resultado de la ejecución, el archivo result.html debería mostrar este contenido:
 [result.html](http://htmlpreview.github.io/?https://github.com/fdeandao/guiaselenium/blob/master/result.html)
 
+####Conclusión
+Selenium es una gran herramienta que resuelve problemas muy específicos al realizar pruebas, pero esta hecha de tal forma que nos permite extender su funcionalidad.
 El siguiente paso sería utilizar una herramienta que nos permita agilizar y eliminar las limitaciones que suponen el uso básico de Selenium, para esto recomiendo [se-interpreter](https://github.com/Zarkonnen/se-interpreter), que trabaja en NodeJS en combinación con SeleniumBuilder pero para ello es necesarío aprender como funciona Selenium
