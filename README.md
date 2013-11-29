@@ -70,10 +70,10 @@ En el directorio donde se encuentra el JAR ejecutar el siguiente comando para ma
 java -jar selenium-server-standalone-<version-number>.jar, por defecto se inicia en el puerto 4444, y esta listo para recibir instrucciones por HTTP.
 Para detener el servidor dar Ctrl + C
 
-Para ejecutar directamente en el servidor un Script generado desde SeleniumIDE y exportado en formato HTML (ejemplo tomado de esta [pagina](http://www.jadeliquid.com/blogs/2011/running-selenium-tests-from-the-command-line.php)):
+Para ejecutar directamente en el servidor un Script generado desde SeleniumIDE y exportado en formato HTML (ejemplo tomado de esta [página](http://www.jadeliquid.com/blogs/2011/running-selenium-tests-from-the-command-line.php)):
 Descargar los siguientes archivos en el mismo directorio donde se encuentra el JAR 
- * [SCRIPT BASICO](https://raw.github.com/fdeandao/guiaselenium/master/script_basico.html): La prueba consiste en entrar a google, buscar Wime.com.mx y esperar que en el primer resultado este el texto de la pagina de Wime
- * [Suit](https://raw.github.com/fdeandao/guiaselenium/master/suit.html): Para poder ejecutar pruebas directamente sobre Selenium RC es necesarias meterlas en un archivo Suit, donde será contenida.
+ * [SCRIPT BASICO](https://raw.github.com/fdeandao/guiaselenium/master/script_basico.html): La prueba consiste en entrar a google, buscar Wime.com.mx y esperar que en el primer resultado este el texto de la página de Wime
+ * [Suit](https://raw.github.com/fdeandao/guiaselenium/master/suit.html): Para poder ejecutar pruebas directamente sobre Selenium RC es necesarias meterlas en un archivo Suite, donde será contenida.
  
 Ejecutar el siguiente comando, donde el archivo result.html guardará el resultado de la ejecución
 java -jar selenium-server-standalone-2.37.0.jar -htmlSuite "*firefox" "http://www.google.com" suit.html result.html
@@ -81,4 +81,4 @@ java -jar selenium-server-standalone-2.37.0.jar -htmlSuite "*firefox" "http://ww
 El resultado de la ejecución, el archivo result.html debería mostrar este contenido:
 [result.html](http://htmlpreview.github.io/?https://github.com/fdeandao/guiaselenium/blob/master/result.html)
 
-El siguiente paso sería utilizar una herramienta que nos permita agilizar y eliminar las limitaciones que suponen el uso básico de Selenium, para esto recomiendo (se-interpreter)[https://github.com/Zarkonnen/se-interpreter], que trabaja en NodeJS en combinación con SeleniumBuilder pero para ello es necesarío aprender como funciona Selenium
+El siguiente paso sería utilizar una herramienta que nos permita agilizar y eliminar las limitaciones que suponen el uso básico de Selenium, para esto recomiendo [se-interpreter](https://github.com/Zarkonnen/se-interpreter), que trabaja en NodeJS en combinación con SeleniumBuilder pero para ello es necesarío aprender como funciona Selenium
