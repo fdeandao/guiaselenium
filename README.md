@@ -34,7 +34,7 @@ Cada instrucción o paso tiene 3 propiedades:
   * nombre
   * CSS
   * DOM
-  * [XPATH](http://www.w3.org/TR/xpath/) este es mas recomendable cuando las pruebas son muy dinamicas, ya que es un lenguaje robusto para localizar elementos dentro de una estructura XML.
+  * [XPATH](http://www.w3.org/TR/xpath/) este es mas recomendable, ya que aveces los elementos que se requiere probar cambian con el paso del tiempo y quizas ya no pueden ser localizados con algunas de las opciones anteriores, esta opción es mas robusta y permite consultas mas dinamicas.
  * Valor (opcional dependiendo del comando) esperado despues de ejecutar el comando
 
 Una instrucción fallará cuando el comando indicado no exista, el objetivo no sea encontrado o el valor esperado es diferente
@@ -71,3 +71,12 @@ java -jar selenium-server-standalone-<version-number>.jar, por defecto se inicia
 Para detener el servidor dar Ctrl + C
 
 Para ejecutar directamente en el servidor un Script generado desde SeleniumIDE y exportado en formato HTML:
+Descargar los siguientes archivos en el mismo directorio donde se encuentra el JAR 
+ * [SCRIPT BASICO](https://raw.github.com/fdeandao/guiaselenium/master/script_basico.html): La prueba consiste en entrar a google, buscar Wime.com.mx y esperar que en el primer resultado este el texto de la pagina de Wime
+ * [Suit](https://raw.github.com/fdeandao/guiaselenium/master/suit.html): Para poder ejecutar pruebas directamente sobre Selenium RC es necesarias meterlas en un archivo Suit, donde sera contenida.
+ 
+Ejecutar el siguiente comando, donde el archivo result.html guardara el resultado de la ejecución
+java -jar selenium-server-standalone-2.37.0.jar -htmlSuite "*firefox" "http://www.google.com" suit.html result.html
+
+En el resultado de la ejecución, el archivo result.html debería mostrar este contenido:
+[result.html](http://htmlpreview.github.io/?https://github.com/fdeandao/guiaselenium/blob/master/result.html)
